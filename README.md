@@ -20,13 +20,18 @@ catkin init
 Compile
 ```
 cd ~/catkin_ws/src/
-git clone
+git clone https://github.com/fine-man/voxblox_ros.git
 catkin build voxblox_ros
 ```
 
 ## Running on RRC rosbag
+There is an associated launch file for RRC hardware lab rosbag under `voxblox_ros/launch`, just download the [RRC rosbag]() and edit the path to the bagfile in `rrc_dataset.launch`, and they simply:
+
+```
+roslaunch voxblox_ros rrc_dataset.launch
+```
 
 ### Sample Results from RRC
-A video showing sample output from voxblox on RRC can be seen [here](https://youtu.be/Q02Q0XH9yEs). The rosbag was recorded using realsense D34 kept on a P3DX mobile robot.
+A video showing sample output from voxblox on RRC can be seen [here](https://youtu.be/Q02Q0XH9yEs). The rosbag was recorded using realsense D455 kept on a P3DX mobile robot.
 
 ![VoxBlox RRC](./results/voxblox-rrc-hardware.png)
